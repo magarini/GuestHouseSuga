@@ -97,14 +97,14 @@ h2{
     object-fit: cover;
     object-position: center;
     min-width: 400px;
-    max-width: 600px;
+    max-width: 800px;
 }
 
-.description .text{
+.description-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     gap: 48px;
 }
 
