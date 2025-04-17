@@ -1,116 +1,278 @@
-:root{
-   --secondary-container:#EAEFF1;
-   --primary:#004E5F;
-   --primary-container:#CEE6F0;
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
+:root {
+  --primary: #004e5f;
+  --primary-container: #b3ebff;
+  --secondary: #4b626a;
+  --secondary-container: #eaeff1;
+  --tertiary: #595c7e;
+  --tertiary-container: #dfe0ff;
+  --surface: #ffffff;
 }
 
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 10rem;
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 6rem;
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  color: var(--primary);
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-container);
+  min-height: 64px;
+  padding: 0 96px;
+  position: sticky;
+}
+
+nav a {
+  color: var(--primary);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: "EB Garamond", serif;
+  font-weight: 600;
+}
+
+nav .tabs {
+  display: flex;
+  gap: 24px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+  padding: 0 96px;
+  background-color: var(--secondary-container);
+}
+
+.intro img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+.intro-logo {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--primary-container);
+  color: var(--primary);
+  padding-bottom: 50vh;
+}
+
+.description {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--secondary-container);
+  padding: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  color: var(--primary);
+
+}
+
+.description img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  min-width: 400px;
+  max-width: 800px;
+}
+
+.description-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 48px;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  max-width: 600px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.accomodation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 96px;
+  background-color: var(--surface);
+  min-height: 100vh;
+  color: var(--primary);
+
+}
+
+.accomodation .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  gap: 24px;
+  width: 100%;
+}
+
+.accomodation h3 {
+  color: var(--tertiary);
+  margin: 0;
+  padding: 0;
+}
+
+.accomodation .card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 24px;
+  border-radius: 8px;
+  align-self: stretch;
+}
+
+.accomodation .card img {
+  width: 100%;
+  max-width: 800px;
+  object-fit: cover;
+  height: 100%;
+}
+
+.accomodation .card-text img {
+  width: 32px;
+  height:32px;
+}
+
+.accomodation .card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 
-
-nav{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:var(--secondary-container);
-    min-height:64px;
-    padding:0 96px;
-    position: sticky;
- 
-    
+.location{
+  background-color: var(--tertiary-container);
+  display:flex;
+  align-items: stretch;
+  min-height: 100vh;
+  color:var(--tertiary);
+  gap:64px;
+  padding: 96px;
 }
 
-nav a{
-    color:var(--primary);
-    font-size: 1rem;
-    text-decoration: none;
+.location img{
+  width:100%;
+  max-width:800px;
+  object-fit:cover;
+  align-self: stretch;
 }
 
-nav .tabs{
-    display:flex;
-    gap:24px;
-}
-
-.intro{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   height: calc(100vh - 64px);
-    padding: 0 96px;
-    background-color:var(--secondary-container);
-}
-
-.intro img{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    max-height: 50vh;
-    object-fit: cover;
-}
-
-.intro-logo{
-    width:100%;
-    height: calc(100vh - 64px);
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: var(--primary-container);
-    color:var(--primary);
-    padding-bottom:50vh;
-}
-
-h1{
-    margin:0;
-    padding:0;
-    font-size: 6rem;
-}
-
-h2{
-    margin:0;
-    padding:0;
-    font-size: 3rem;
-    color:var(--primary);
+.location-col{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: flex-start;
 
 }
 
-.description{
-    width:100vw;
-    height:100vh;
-    background-color:var(--secondary-container);
-    padding:96px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-wrap: wrap; */
-    gap:24px;
+.location-col h2{
+  color: var(--tertiary);
+  margin:0;
+  padding:0;
 }
 
-.description img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    min-width: 400px;
-    max-width: 800px;
+.location-col p{
+  font-size: 1.5rem;
+  color: var(--tertiary);
+  margin:8px 0;
+  padding:0;
 }
 
-.description-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    gap: 48px;
+.location-col a{
+  padding: 16px 32px;
+  border-radius: 48px;
+  background-color: var(--tertiary);
+  text-decoration: none;
+  color:var(--surface);
+  font-size: 1.5rem;
+  font-family: "EB Garamond", serif;
 }
 
-p{
-    font-size: 1.5rem;
-    line-height: 2rem;
-    color:var(--primary);
-    max-width: 600px;
+.history{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 96px;
+  background-color: var(--primary-container);
+  color:var(--primary)
+}
+.history-text{
+  margin:24px 0;
+}
+.history p{
+  margin:8px 0;
+}
+
+.history img{
+  width:100%;
+  max-width:800px;
+  object-fit:cover;
+  align-self: stretch;
+}
+
+footer{
+  display:flex; 
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--secondary-container);
+  color:var(--secondary);
+  padding:96px;
+  gap:48px;
+}
+
+.contact-item{
+  margin:16px 0;
+  gap:8px;
+  display:flex;
+  align-items: flex-start;
 }
