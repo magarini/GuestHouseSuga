@@ -49,7 +49,40 @@ nav {
   background-color: var(--secondary-container);
   min-height: 64px;
   padding: 0 96px;
-  position: sticky;
+  position: fixed;
+  z-index: 2;
+  width:100vw;
+}
+
+.menu {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--secondary-container);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu a {
+  margin: 0 24px;
+  color: var(--primary);
+}
+
+.burgerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger {
+  margin: 0 24px;
+  display: none;
+}
+
+.burger img{
+  width:32px;
 }
 
 nav a {
@@ -85,14 +118,13 @@ nav .tabs {
 
 .intro-logo {
   width: 100%;
-  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: var(--primary-container);
   color: var(--primary);
-  padding-bottom: 50vh;
+ height:100%;
 }
 
 .description {
@@ -128,7 +160,7 @@ nav .tabs {
 p {
   font-size: 1.5rem;
   line-height: 2rem;
-  max-width: 600px;
+  max-width: 700px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -189,7 +221,7 @@ p {
 }
 
 
-.location{
+#location{
   background-color: var(--tertiary-container);
   display:flex;
   align-items: stretch;
@@ -199,7 +231,7 @@ p {
   padding: 96px;
 }
 
-.location img{
+#location img{
   width:100%;
   max-width:800px;
   object-fit:cover;
@@ -263,6 +295,7 @@ p {
 footer{
   display:flex; 
   flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
   background-color: var(--secondary-container);
   color:var(--secondary);
@@ -275,4 +308,51 @@ footer{
   gap:8px;
   display:flex;
   align-items: flex-start;
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+    
+    
+
+  nav {
+      min-height: 64px;
+      z-index: 2;
+      flex-direction: column;
+      width:100vw;
+      padding:0 24px;
+  }
+
+  .burgerMenu {
+      width: 100%;
+      min-height: 56px;
+      /* background-color: var(--bg-color); */
+
+  }
+
+  .burger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      height: auto;
+      background-color: var(--secondary-container);
+      position: absolute;   
+      top:64px;
+      padding: 0 24px;
+  }
+
+  .menu a {
+    margin: 16px 24px;
+    min-height:48px;
+}
 }
