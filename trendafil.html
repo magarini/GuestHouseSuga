@@ -23,20 +23,21 @@
     </nav>
     <main>
       <section class="accomodation room-intro">
-        <h1>Qiparis</h1>
+        <h1>Trendafil</h1>
         <p>
-          This charming studio, overlooking the sea and mountains, provides a
-          peaceful space to enjoy your holiday.
+          Experience a relaxing stay in this beautiful studio, featuring
+          stunning sea views from its balcony, beautifully shaded by a peach
+          tree. Perfect for a peaceful and comfortable getaway.
         </p>
         <div class="chips">
-          <div class="chip"><img src="icons/crop.svg">36m2</div>
-          <div class="chip"><img src="icons/person.svg">3 guests</div>
+          <div class="chip"><img src="icons/crop.svg" />32m2</div>
+          <div class="chip"><img src="icons/person.svg" />3 guests</div>
         </div>
-        <img src="img/studios.jpg" alt="Studio View" class="studio-view" />
+        <img src="img\trendafil\P8190847.jpg" alt="Studio View" class="studio-view" />
       </section>
       <section class="features">
         <div class="img-container">
-          <img src="img/studios.jpg" alt="Studio View" class="studio-view" />
+          <img src="img\trendafil\P8190859.jpg" alt="Studio View" class="studio-view" />
           <div class="badge">
             <p>80€</p>
           </div>
@@ -45,22 +46,42 @@
           <h2>Room Features</h2>
           <div class="features-list">
             <div class="feature-item">
-              <img src="icons\wifi.svg" /><p>Free Wi-Fi</p>
+              <img src="icons\bed.svg" />
+              <p>
+                1 Double Bed &amp; 1 Single Bed <br />
+                Extra Rollaway Bed – Available upon request
+              </p>
             </div>
             <div class="feature-item">
-              <img src="icons\ac_unit.svg" /><p>Air conditioning</p>
+              <img src="icons\stockpot.svg" />
+              <p>
+                Kitchen with a cooktop <br />
+                &amp; all necessary cooking equipment
+              </p>
             </div>
             <div class="feature-item">
-              <img src="icons\shower.svg" /><p>Private bathroom</p>
+              <img src="icons\shower.svg" />
+              <p>Shower Amenities &amp; Hairdryer</p>
             </div>
             <div class="feature-item">
-              <img src="icons\stockpot.svg" /><p>Kitchenette</p>
+              <img src="icons\panorama.svg" />
+              <p>Private Balcony</p>
             </div>
             <div class="feature-item">
-              <img src="icons\screen.svg" /><p>TV</p>
+              <img src="icons\ac_unit.svg" />
+              <p>A/C</p>
             </div>
             <div class="feature-item">
-              <img src="icons\panorama.svg" /><p>Balcony with sea view</p>
+              <img src="icons\wifi.svg" />
+              <p>Free Wi-Fi</p>
+            </div>
+            <div class="feature-item">
+              <img src="icons\screen.svg" />
+              <p>TV</p>
+            </div>
+            <div class="feature-item">
+              <img src="icons\local_parking.svg" />
+              <p>Free parking</p>
             </div>
           </div>
         </div>
@@ -87,21 +108,24 @@
             </div>
           </div>
         </div>
-        
-        <img src="img/studios.jpg" alt="Studio View" class="studio-view" />
+
+        <img src="img\trendafil\P8190865.jpg" alt="Studio View" class="studio-view" />
       </section>
       <section class="gallery">
         <h2>Gallery</h2>
         <div id="slide-container">
-          <img src="img/appartments.jpg">
-          <img src="img/appartments.jpg">
-          <img src="img/appartments.jpg">
+          <img src="img\trendafil\P8190847.jpg" />
+          <img src="img\trendafil\P8190859.jpg" />
+          <img src="img\trendafil\P8190865.jpg" />
+          <img src="img\trendafil\P8190886.jpg" />
 
-          
         </div>
-        <button id="slide-right" type="button"><img src="icons/arrow_right.svg"></button>
-        <button id="slide-left" type="button"><img src="icons/arrow_left.svg"></button>
-
+        <button id="slide-right" type="button">
+          <img src="icons/arrow_right.svg" />
+        </button>
+        <button id="slide-left" type="button">
+          <img src="icons/arrow_left.svg" />
+        </button>
       </section>
 
       <footer id="contact">
@@ -146,7 +170,6 @@
     </main>
     <script src="general.js"></script>
     <script>
-
       let buttonRight = document.getElementById("slide-right");
       buttonRight.onclick = function () {
         document.getElementById("slide-container").scrollLeft += 200;
