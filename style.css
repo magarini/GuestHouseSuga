@@ -225,7 +225,7 @@ p {
 
 .accomodation .card img {
   width: 100%;
-  max-width: 800px;
+  /* max-width: 800px; */
   object-fit: cover;
   height: 100%;
 }
