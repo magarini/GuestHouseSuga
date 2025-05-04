@@ -266,6 +266,8 @@ flex:1;
   max-width: 800px;
   object-fit: cover;
   align-self: stretch;
+  max-height: calc(100vh - 198px);
+
 }
 
 .location-col {
@@ -404,7 +406,7 @@ footer {
   padding: 96px 48px;
   background-color: var(--secondary-container);
   color: var(--primary);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .features-text {
@@ -431,6 +433,12 @@ footer {
   max-width: 700px;
   font-family: "Inter", sans-serif;
   color: var(--tertiary);
+}
+
+.features-text h2,
+.prices-text h2 {
+  margin-bottom: 48px;
+  padding: 0;
 }
 
 .features img,
@@ -460,7 +468,7 @@ footer {
 }
 
 .features .badge p {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "EB Garamond", serif;
   margin: 0;
   padding: 0;
