@@ -233,13 +233,22 @@ p {
 .accomodation .card-text img {
   width: 32px;
   height: 32px;
+  display:none;
+}
+
+.card:hover .card-text img{
+  display: block;
 }
 
 .accomodation .card-text {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
+}
+
+.accomodation .card-text h3 {
+flex:1;
 }
 
 #location {
