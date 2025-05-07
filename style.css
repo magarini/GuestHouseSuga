@@ -17,6 +17,10 @@
   padding: 0;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 h1 {
   margin: 0;
   padding: 0;
@@ -233,12 +237,8 @@ p {
 .accomodation .card-text img {
   width: 32px;
   height: 32px;
-  display:none;
 }
 
-.card:hover .card-text img{
-  display: block;
-}
 
 .accomodation .card-text {
   display: flex;
@@ -454,24 +454,6 @@ footer {
   position: relative;
 }
 
-.features .badge {
-  position: absolute;
-  bottom: -48px;
-  right: 48px;
-  background-color: var(--tertiary);
-  color: white;
-  padding: 16px 32px;
-  border-radius: 64px;
-  display: flex;
-}
-
-.features .badge p {
-  font-size: 3rem;
-  font-family: "EB Garamond", serif;
-  margin: 0;
-  padding: 0;
-  line-height: 100%;
-}
 
 .feature-item {
   display: flex;
@@ -607,7 +589,7 @@ button#slide-right {
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   h2 {
@@ -693,15 +675,6 @@ button#slide-right {
 
   .features {
     flex-direction: column-reverse;
-  }
-
-  .features .badge {
-    bottom: -24px;
-    right: 24px;
-  }
-
-  .features .badge p {
-    font-size: 1.5rem;
   }
 
   .feature-item{
