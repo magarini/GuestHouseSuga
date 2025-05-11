@@ -32,7 +32,7 @@ h1 {
 h2 {
   margin: 0;
   padding: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "EB Garamond", serif;
   font-weight: 500;
   line-height: 100%;
@@ -103,13 +103,14 @@ nav .tabs {
   gap: 24px;
 }
 
+
 .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 96px;
+  padding: 0 48px;
   background-color: var(--secondary-container);
 }
 
@@ -187,13 +188,14 @@ p {
 .accomodation {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: flex-start;
   gap: 48px;
   padding: 64px 48px 48px;
   background-color: var(--surface);
   min-height: 100vh;
   color: var(--primary);
+  box-sizing: border-box;
 }
 
 .accomodation .card-container {
@@ -301,13 +303,18 @@ flex:1;
 
 .history {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 48px;
   padding: 96px 48px;
   background-color: var(--primary-container);
   color: var(--primary);
 }
+
+.history-col{
+  flex:1;
+}
+
 .history-text {
   margin: 24px 0;
 }
@@ -397,12 +404,13 @@ footer {
   height: 100%;
   object-fit: cover;
   margin: 8px 0;
+  overflow: hidden;
 }
 
 .features,
 .prices {
   display: flex;
-  gap: 24px;
+  gap: 48px;
   padding: 96px 48px;
   background-color: var(--secondary-container);
   color: var(--primary);
@@ -441,9 +449,10 @@ footer {
 
 .features img,
 .prices img {
-  width: 100%;
+  width: 50%;
   object-fit: cover;
   flex: 1;
+  object-position: center;
   /* max-height:600px; */
 }
 

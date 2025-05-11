@@ -15,8 +15,7 @@
         /></a>
       </div>
       <div class="menu">
-        <a href="accomodation.html">Rooms</a>
-        <a href="index.html#location">Location</a>
+        <a href="accomodation.html">Rooms & Prices</a>        <a href="index.html#location">Location</a>
 
         <a href="#contact">Contact</a>
       </div>
@@ -37,6 +36,25 @@
           alt="Studio View"
           class="studio-view"
         />
+      </section>
+      <section class="gallery">
+        <h2>Gallery</h2>
+        <div id="slide-container">
+          <img src="img\perle\P8100563.jpg" />
+          <img src="img\perle\P8100572.jpg" />
+          <img src="img\perle\P8100621.jpg" />
+          <img src="img\perle\P8100624.jpg" />
+          <img src="img\perle\P8100629.jpg" />
+          <img src="img\perle\P8100645.jpg" />
+          <img src="img\perle\P8100672.jpg" />
+          <img src="img\perle\P8100702.jpg" />
+        </div>
+        <button id="slide-right" type="button">
+          <img src="icons/arrow_right.svg" />
+        </button>
+        <button id="slide-left" type="button">
+          <img src="icons/arrow_left.svg" />
+        </button>
       </section>
       <section class="features">
         <div class="img-container">
@@ -119,25 +137,7 @@
           class="studio-view"
         />
       </section>
-      <section class="gallery">
-        <h2>Gallery</h2>
-        <div id="slide-container">
-          <img src="img\perle\P8100563.jpg" />
-          <img src="img\perle\P8100572.jpg" />
-          <img src="img\perle\P8100621.jpg" />
-          <img src="img\perle\P8100624.jpg" />
-          <img src="img\perle\P8100629.jpg" />
-          <img src="img\perle\P8100645.jpg" />
-          <img src="img\perle\P8100672.jpg" />
-          <img src="img\perle\P8100702.jpg" />
-        </div>
-        <button id="slide-right" type="button">
-          <img src="icons/arrow_right.svg" />
-        </button>
-        <button id="slide-left" type="button">
-          <img src="icons/arrow_left.svg" />
-        </button>
-      </section>
+      
 
       <footer id="contact">
         <h2>Contact</h2>
@@ -182,16 +182,39 @@
     </main>
     <script src="general.js"></script>
 
-    <script>
-      let buttonRight = document.getElementById("slide-right");
-      buttonRight.onclick = function () {
-        document.getElementById("slide-container").scrollLeft += 200;
-      };
+<script>
+  const slideContainer = document.getElementById("slide-container");
+  const images = slideContainer.getElementsByTagName("img");
+  let currentIndex = 0;
 
-      let buttonLeft = document.getElementById("slide-left");
-      buttonLeft.onclick = function () {
-        document.getElementById("slide-container").scrollLeft -= 200;
-      };
-    </script>
+  function scrollToImage(index) {
+    if (index < 0 || index >= images.length) return;
+    const img = images[index];
+    const containerWidth = slideContainer.offsetWidth;
+    const imgLeft = img.offsetLeft;
+    const imgWidth = img.offsetWidth;
+    // Center the image
+    const scrollLeft = imgLeft - (containerWidth / 2) + (imgWidth / 2);
+    slideContainer.scrollTo({ left: scrollLeft, behavior: "smooth" });
+    currentIndex = index;
+  }
+
+  document.getElementById("slide-right").onclick = function () {
+    if (currentIndex < images.length - 1) {
+      scrollToImage(currentIndex + 1);
+    }
+  };
+
+  document.getElementById("slide-left").onclick = function () {
+    if (currentIndex > 0) {
+      scrollToImage(currentIndex - 1);
+    }
+  };
+
+  // Optionally, center the first image on load
+  window.onload = function() {
+    scrollToImage(currentIndex);
+  };
+</script>
   </body>
 </html>
