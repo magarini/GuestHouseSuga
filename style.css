@@ -708,10 +708,16 @@ button#slide-right {
   }
 
   button#slide-left {
-    left: 8px;
+    left: calc(100vw - 128px) ;
+    top: 70%;
+    width:48px;
+    height:48px;
   }
 
   button#slide-right {
-    right: 8px;
+    right: 16px;
+    top:70%;
+    width:48px;
+    height:48px;
   }
 }
