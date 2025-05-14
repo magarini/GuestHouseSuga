@@ -682,6 +682,12 @@ button#slide-right {
     gap: 32px;
   }
 
+  .features img,
+.prices img {
+  width: 100%;
+
+}
+
   .features {
     flex-direction: column-reverse;
   }
