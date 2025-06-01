@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guest House Suga</title>     <meta
+    <title>Guest House Suga</title>
+    <meta
       name="description"
       content="Family-run guesthouse in the heart of the Albanian Riviera, just steps from the beach. Enjoy bright apartments with stunning views of the Ceraunian Mountains and Ionian Sea—perfect for a relaxing, comfortable stay with loved ones since 2006."
     />
@@ -23,7 +24,8 @@
         /></a>
       </div>
       <div class="menu">
-        <a href="accomodation.html">Rooms & Prices</a>        <a href="index.html#location">Location</a>
+        <a href="accomodation.html">Rooms & Prices</a>
+        <a href="index.html#location">Location</a>
 
         <a href="#contact">Contact</a>
       </div>
@@ -40,16 +42,22 @@
           <div class="chip"><img src="icons/crop.svg" />32m2</div>
           <div class="chip"><img src="icons/person.svg" />3 guests</div>
         </div>
-        <img src="img\trendafil\P8190847.jpg" alt="Studio View" class="studio-view" />
+        <img
+          src="img\trendafil\P8190847.jpg"
+          alt="Studio View"
+          class="studio-view"
+        />
       </section>
-            <section class="gallery">
+      <section class="gallery">
         <h2>Gallery</h2>
         <div id="slide-container">
           <img src="img\trendafil\P8190847.jpg" />
           <img src="img\trendafil\P8190859.jpg" />
           <img src="img\trendafil\P8190865.jpg" />
           <img src="img\trendafil\P8190886.jpg" />
-
+          <img src="img\trendafil\P8190912.jpg" />
+          <img src="img\trendafil\P8190924.jpg" />
+          <img src="img\trendafil\P8190929.jpg" />
         </div>
         <button id="slide-right" type="button">
           <img src="icons/arrow_right.svg" />
@@ -60,8 +68,11 @@
       </section>
       <section class="features">
         <div class="img-container">
-          <img src="img\trendafil\P8190859.jpg" alt="Studio View" class="studio-view" />
-         
+          <img
+            src="img\trendafil\P8190859.jpg"
+            alt="Studio View"
+            class="studio-view"
+          />
         </div>
         <div class="features-text">
           <h2>Room Features</h2>
@@ -130,9 +141,12 @@
           </div>
         </div>
 
-        <img src="img\trendafil\P8190865.jpg" alt="Studio View" class="studio-view" />
+        <img
+          src="img\trendafil\P8190865.jpg"
+          alt="Studio View"
+          class="studio-view"
+        />
       </section>
-
 
       <footer id="contact">
         <h2>Contact</h2>
@@ -183,39 +197,39 @@
       </footer>
     </main>
     <script src="general.js"></script>
-<script>
-  const slideContainer = document.getElementById("slide-container");
-  const images = slideContainer.getElementsByTagName("img");
-  let currentIndex = 0;
+    <script>
+      const slideContainer = document.getElementById("slide-container");
+      const images = slideContainer.getElementsByTagName("img");
+      let currentIndex = 0;
 
-  function scrollToImage(index) {
-    if (index < 0 || index >= images.length) return;
-    const img = images[index];
-    const containerWidth = slideContainer.offsetWidth;
-    const imgLeft = img.offsetLeft;
-    const imgWidth = img.offsetWidth;
-    // Center the image
-    const scrollLeft = imgLeft - (containerWidth / 2) + (imgWidth / 2);
-    slideContainer.scrollTo({ left: scrollLeft, behavior: "smooth" });
-    currentIndex = index;
-  }
+      function scrollToImage(index) {
+        if (index < 0 || index >= images.length) return;
+        const img = images[index];
+        const containerWidth = slideContainer.offsetWidth;
+        const imgLeft = img.offsetLeft;
+        const imgWidth = img.offsetWidth;
+        // Center the image
+        const scrollLeft = imgLeft - containerWidth / 2 + imgWidth / 2;
+        slideContainer.scrollTo({ left: scrollLeft, behavior: "smooth" });
+        currentIndex = index;
+      }
 
-  document.getElementById("slide-right").onclick = function () {
-    if (currentIndex < images.length - 1) {
-      scrollToImage(currentIndex + 1);
-    }
-  };
+      document.getElementById("slide-right").onclick = function () {
+        if (currentIndex < images.length - 1) {
+          scrollToImage(currentIndex + 1);
+        }
+      };
 
-  document.getElementById("slide-left").onclick = function () {
-    if (currentIndex > 0) {
-      scrollToImage(currentIndex - 1);
-    }
-  };
+      document.getElementById("slide-left").onclick = function () {
+        if (currentIndex > 0) {
+          scrollToImage(currentIndex - 1);
+        }
+      };
 
-  // Optionally, center the first image on load
-  window.onload = function() {
-    scrollToImage(currentIndex);
-  };
-</script>
+      // Optionally, center the first image on load
+      window.onload = function () {
+        scrollToImage(currentIndex);
+      };
+    </script>
   </body>
 </html>
