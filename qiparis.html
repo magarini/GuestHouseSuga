@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guest House Suga</title>     <meta
+    <title>Guest House Suga</title>
+    <meta
       name="description"
       content="Family-run guesthouse in the heart of the Albanian Riviera, just steps from the beach. Enjoy bright apartments with stunning views of the Ceraunian Mountains and Ionian Sea—perfect for a relaxing, comfortable stay with loved ones since 2006."
     />
@@ -23,7 +24,8 @@
         /></a>
       </div>
       <div class="menu">
-        <a href="accomodation.html">Rooms & Prices</a>        <a href="index.html#location">Location</a>
+        <a href="accomodation.html">Rooms & Prices</a>
+        <a href="index.html#location">Location</a>
 
         <a href="#contact">Contact</a>
       </div>
@@ -45,9 +47,14 @@
           class="studio-view"
         />
       </section>
-            <section class="gallery">
+      <section class="gallery">
         <h2>Gallery</h2>
         <div id="slide-container">
+          <img
+            src="img\qiparis\P8170827.jpg"
+            alt="Studio View"
+            class="studio-view"
+          />
           <img src="img\qiparis\P8170754.jpg" />
           <img src="img\qiparis\P8170760.jpg" />
           <img src="img\qiparis\P8170766.jpg" />
@@ -57,8 +64,6 @@
           <img src="img\qiparis\P8170811.jpg" />
           <img src="img\qiparis\P8170827.jpg" />
           <img src="img\qiparis\P8170835.jpg" />
-
-
         </div>
         <button id="slide-right" type="button">
           <img src="icons/arrow_right.svg" />
@@ -74,7 +79,6 @@
             alt="Studio View"
             class="studio-view"
           />
-       
         </div>
         <div class="features-text">
           <h2>Room Features</h2>
@@ -150,7 +154,6 @@
         />
       </section>
 
-
       <footer id="contact">
         <h2>Contact</h2>
         <div class="contact-details">
@@ -185,48 +188,55 @@
             </div>
           </div>
           <div class="contact-item">
-            <a href="https://www.instagram.com/guesthouse_suga1/" target="_blank"><img src="icons/instagram.svg" alt="insta" class="icon" /> </a>
-            <a href="https://www.google.com/maps/@40.0496066,19.8118115,3a,90y,261.17h,100.05t/data=!3m7!1e1!3m5!1sWKGJ4I4c5HTrHBD6M_K5VQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-10.049999999999997%26panoid%3DWKGJ4I4c5HTrHBD6M_K5VQ%26yaw%3D261.17!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" target="_blank"><img src="icons/360.svg" alt="clock" class="icon" />
- </a>
+            <a
+              href="https://www.instagram.com/guesthouse_suga1/"
+              target="_blank"
+              ><img src="icons/instagram.svg" alt="insta" class="icon" />
+            </a>
+            <a
+              href="https://www.google.com/maps/@40.0496066,19.8118115,3a,90y,261.17h,100.05t/data=!3m7!1e1!3m5!1sWKGJ4I4c5HTrHBD6M_K5VQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-10.049999999999997%26panoid%3DWKGJ4I4c5HTrHBD6M_K5VQ%26yaw%3D261.17!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              ><img src="icons/360.svg" alt="clock" class="icon" />
+            </a>
           </div>
         </div>
       </footer>
     </main>
     <script src="general.js"></script>
 
-<script>
-  const slideContainer = document.getElementById("slide-container");
-  const images = slideContainer.getElementsByTagName("img");
-  let currentIndex = 0;
+    <script>
+      const slideContainer = document.getElementById("slide-container");
+      const images = slideContainer.getElementsByTagName("img");
+      let currentIndex = 0;
 
-  function scrollToImage(index) {
-    if (index < 0 || index >= images.length) return;
-    const img = images[index];
-    const containerWidth = slideContainer.offsetWidth;
-    const imgLeft = img.offsetLeft;
-    const imgWidth = img.offsetWidth;
-    // Center the image
-    const scrollLeft = imgLeft - (containerWidth / 2) + (imgWidth / 2);
-    slideContainer.scrollTo({ left: scrollLeft, behavior: "smooth" });
-    currentIndex = index;
-  }
+      function scrollToImage(index) {
+        if (index < 0 || index >= images.length) return;
+        const img = images[index];
+        const containerWidth = slideContainer.offsetWidth;
+        const imgLeft = img.offsetLeft;
+        const imgWidth = img.offsetWidth;
+        // Center the image
+        const scrollLeft = imgLeft - containerWidth / 2 + imgWidth / 2;
+        slideContainer.scrollTo({ left: scrollLeft, behavior: "smooth" });
+        currentIndex = index;
+      }
 
-  document.getElementById("slide-right").onclick = function () {
-    if (currentIndex < images.length - 1) {
-      scrollToImage(currentIndex + 1);
-    }
-  };
+      document.getElementById("slide-right").onclick = function () {
+        if (currentIndex < images.length - 1) {
+          scrollToImage(currentIndex + 1);
+        }
+      };
 
-  document.getElementById("slide-left").onclick = function () {
-    if (currentIndex > 0) {
-      scrollToImage(currentIndex - 1);
-    }
-  };
+      document.getElementById("slide-left").onclick = function () {
+        if (currentIndex > 0) {
+          scrollToImage(currentIndex - 1);
+        }
+      };
 
-  // Optionally, center the first image on load
-  window.onload = function() {
-    scrollToImage(currentIndex);
-  };
-</script>
+      // Optionally, center the first image on load
+      window.onload = function () {
+        scrollToImage(currentIndex);
+      };
+    </script>
   </body>
 </html>
