@@ -343,7 +343,7 @@ footer {
   justify-content: center;
   min-height: 100vh;
   background-color: var(--footer-container);
-  color: var(--secondary);
+  color: var(--primary);
   padding: 96px 48px;
   gap: 48px;
 }
