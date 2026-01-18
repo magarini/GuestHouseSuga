@@ -615,6 +615,8 @@ button#slide-right {
     font-size: 2.5rem;
   }
 
+ 
+
   h3 {
     font-size: 1.5rem;
   }
@@ -625,6 +627,18 @@ button#slide-right {
 
   .intro {
     padding: 0 16px;
+  }
+
+  .intro-text-container h1{
+    font-size:4rem;
+  }
+
+  .intro h1{
+    font-size:5rem;
+  }
+
+   .intro h2{
+    font-size:2rem;
   }
 
   .description {
