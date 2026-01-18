@@ -42,7 +42,7 @@ h3 {
   margin: 0;
   padding: 0;
   font-size: 2.5rem;
-  color: var(--primary);
+  /* color: var(--primary); */
   font-family: "EB Garamond", serif;
   font-weight: 500;
 }
@@ -141,6 +141,13 @@ nav .tabs {
   align-items: center;
   gap: 24px;
   /* max-width: 700px; */
+}
+
+.intro-text-container{
+  display:flex;
+  flex-direction:column;
+  align-items: flex-start;
+  gap:16px;
 }
 
 .into h1,
@@ -307,8 +314,8 @@ flex:1;
   align-items: center;
   gap: 48px;
   padding: 96px 48px;
-  background-color: var(--primary-container);
-  color: var(--primary);
+  background-color: var(--secondary-container);
+  color: var(--secondary);
 }
 
 .history-col{
@@ -394,9 +401,10 @@ footer {
 }
 
 .room-page h1 {
-  margin: 32px 0 16px;
+  margin: 32px 0 0;
   font-size: 5rem;
   color: var(--primary);
+  line-height: 100%;
 }
 
 .room-intro img {
@@ -413,7 +421,7 @@ footer {
   display: flex;
   gap: 48px;
   padding: 96px 48px;
-  background-color: var(--secondary-container);
+  /* background-color: var(--secondary-container); */
   color: var(--primary);
   min-height: 100vh;
 }
@@ -488,8 +496,8 @@ footer {
 }
 
 .prices {
-  color: var(--tertiary);
-  background-color: var(--tertiary-container);
+  color: var(--secondary);
+  background-color: var(--secondary-container);
 }
 
 .gallery {
@@ -498,8 +506,8 @@ footer {
 
   gap: 48px;
   padding: 96px 48px;
-  background-color: var(--primary-container);
-  color: var(--primary);
+  background-color: var(--tertiary-container);
+  color: var(--tertiary);
   height: 100vh;
   position: relative;
 }
