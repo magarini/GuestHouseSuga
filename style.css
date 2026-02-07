@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 :root {
   --primary: #004e5f;
-  --primary-container: #b3ebff;
+  --primary-container: #cee6f0;
   --secondary: #4b626a;
   --secondary-container: #eaeff1;
   --tertiary: #595c7e;
@@ -140,7 +140,7 @@ nav .tabs {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  /* gap: 24px; */
   /* max-width: 700px; */
 }
 
@@ -558,6 +558,10 @@ button#slide-right {
 
   h2 {
     font-size: 3rem;
+  }
+
+  .intro-text h2{
+    font-size:2.5rem;
   }
 
   h3 {
